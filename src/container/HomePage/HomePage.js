@@ -24,7 +24,7 @@ const HomePage = () => {
       title: "Youtube",
       description: "sashimeomeo",
       colorTheme: "#ff0000",
-      image: "youtubeIcon.png",
+      image: "youtubeLogo1.jpg",
       url: "https://www.youtube.com/channel/UCesFWibG8Db0T7QTpL-otRg",
     },
   ];
@@ -33,7 +33,7 @@ const HomePage = () => {
       <strong>Home</strong>
       <Banner>
         <div className="banner-description">
-          <h3>Đây Là Trang Web Của Sashimeomeo </h3>
+          <h3>@ Sashimeomeo Website @ </h3>
           <span>1 Đống mèo ...</span>
           <Button href="#">Đọc Thêm</Button>
         </div>

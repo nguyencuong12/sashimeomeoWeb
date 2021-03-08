@@ -1,12 +1,12 @@
-import { HomePage } from "./container";
+import { HomePage, MeoAnhLongNgan } from "./container";
 export default [
   {
     path: "/home",
     component: () => <HomePage></HomePage>,
   },
   {
-    path: "/cat",
-    component: () => <h1>CAT</h1>,
+    path: "/meoanhlongngan",
+    component: () => <MeoAnhLongNgan />,
   },
   {
     path: "/*",

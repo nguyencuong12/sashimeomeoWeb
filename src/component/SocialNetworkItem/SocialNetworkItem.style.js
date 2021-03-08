@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const SocialImage = styled.div`
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 100px;
+  max-height: 100px;
   /* .grow { transition: all .2s ease-in-out; } */
   transition: all 400ms ease-in-out;
   /* object-fit: contain; */
@@ -16,7 +16,7 @@ export const SocialWrapper = styled.div`
   background-color: ${(props) => props.colorTheme};
   overflow: hidden;
   flex-grow: 1;
-  margin: 5px;
+  margin: 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;

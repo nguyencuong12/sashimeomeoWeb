@@ -18,6 +18,7 @@ const Header = styled.div`
 
   .button-dropdownMenu {
     display: flex;
+    margin: 10px;
   }
   .button-dropdownMenu > .dropdown {
     margin-right: 12px;
@@ -30,10 +31,11 @@ const Header = styled.div`
     width: 120px;
     object-fit: contain;
     border-radius: 50%;
-    margin-right: 10px;
+    margin: 10px;
   }
   .search-field {
     display: flex;
+    margin: 10px;
   }
   .search-field > input {
     margin-left: 3px;
@@ -41,22 +43,36 @@ const Header = styled.div`
   .search-field > button {
     margin-left: 3px;
   }
+  @media only screen and (max-width: 840px) {
+    flex-direction: column;
+  }
 `;
 
 const Footer = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
   position: relative;
   bottom: 0;
   height: 50px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
   background-color: #17a2b8;
-  > h3 {
+  /* > h3 {
     text-align: center;
     color: #fff;
+  } */
+  > h3 {
+    font-weight: 800;
+    font-family: "Akaya Telivigala", cursive;
   }
 `;
 
 const Body = styled.div`
   margin: 50px 50px;
+  min-height: 65vh;
 `;
 
 export { Header, Footer, Body };

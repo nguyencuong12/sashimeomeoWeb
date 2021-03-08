@@ -23,6 +23,11 @@ const MainLayout = (props) => {
       path: "/meomuchkin",
       active: false,
     },
+    {
+      title: "Mèo Con",
+      path: "/meocon",
+      active: false,
+    },
   ];
 
   const catFood = [
@@ -60,18 +65,30 @@ const MainLayout = (props) => {
     },
   ];
 
+  // (*********** FUNCTION ************//
+  function handleClick(event, url) {
+    event.preventDefault();
+    window.location.href = url;
+  }
+  // (*********** FUNCTION ************//
+
   return (
     <React.Fragment>
       {/* <h1>this is main layout</h1> */}
       <Header>
-        <a className="logo" href="#">
+        <a className="logo" href="/home">
           <img src="/shi.jpg"></img>
         </a>
 
         <div className="button-dropdownMenu">
           <DropdownButton variant="info" id="dropdown-basic-button" title="Mèo">
             {catList.map((cat, index) => (
-              <Dropdown.Item href="#" active={cat.active}>
+              <Dropdown.Item
+                href="#"
+                active={cat.active}
+                key={index}
+                onClick={(e) => handleClick(e, cat.path)}
+              >
                 {cat.title}
               </Dropdown.Item>
             ))}
@@ -79,14 +96,22 @@ const MainLayout = (props) => {
 
           <DropdownButton variant="info" id="dropdown-basic-button" title="Thức Ăn Cho Mèo">
             {catFood.map((food, index) => (
-              <Dropdown.Item href="#" active={food.active}>
+              <Dropdown.Item
+                href="#"
+                active={food.active}
+                onClick={(e) => handleClick(e, food.path)}
+              >
                 {food.title}
               </Dropdown.Item>
             ))}
           </DropdownButton>
           <DropdownButton variant="info" id="dropdown-basic-button" title="Bệnh Ở Mèo">
             {DiseaseCat.map((disease, index) => (
-              <Dropdown.Item href="#" active={disease.active}>
+              <Dropdown.Item
+                href="#"
+                active={disease.active}
+                onClick={(e) => handleClick(e, disease.path)}
+              >
                 {disease.title}
               </Dropdown.Item>
             ))}
@@ -96,7 +121,7 @@ const MainLayout = (props) => {
         <div className="header-search">
           {/* <Form.Group> */}
           <div className="search-field">
-            <Form.Control type="text" placeholder="Normal text" />
+            <Form.Control type="text" placeholder="Tìm Kiếm" />
             <Button variant="info" size="sm">
               Search
             </Button>
@@ -108,7 +133,7 @@ const MainLayout = (props) => {
       {/* <div className="body-content">{childrenWithProps}</div> */}
       {/* <div className="footer"></div> */}
       <Footer>
-        <h3>This is footer</h3>
+        <h3>@Sashimeomeo</h3>
       </Footer>
     </React.Fragment>
   );
