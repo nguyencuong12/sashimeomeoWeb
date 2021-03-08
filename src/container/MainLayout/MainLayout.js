@@ -33,7 +33,7 @@ const MainLayout = (props) => {
   const catFood = [
     {
       title: "Catrang",
-      path: "/catrang",
+      path: "/hat/catrang",
       active: true,
     },
     {
@@ -50,17 +50,17 @@ const MainLayout = (props) => {
   const DiseaseCat = [
     {
       title: "Viêm Phúc Mạc (FIP)",
-      path: "/catrang",
+      path: "/benh/fip",
       active: true,
     },
     {
       title: "FIV",
-      path: "/catrang",
+      path: "/benh/fiv",
       active: false,
     },
     {
       title: "Bí Tiểu",
-      path: "/catrang",
+      path: "/benh/suythan",
       active: false,
     },
   ];

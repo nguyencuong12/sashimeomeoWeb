@@ -24,4 +24,7 @@ export const ProductItemWrapper = styled.div`
   > span {
     margin-top: 20px;
   }
+  .price {
+    color: red;
+  }
 `;

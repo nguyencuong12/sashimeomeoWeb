@@ -1,4 +1,5 @@
-import { HomePage, MeoAnhLongNgan } from "./container";
+import { HomePage, MeoAnhLongNgan, FIP, FIV, SuyThan, Catrang } from "./container";
+
 export default [
   {
     path: "/home",
@@ -7,6 +8,22 @@ export default [
   {
     path: "/meoanhlongngan",
     component: () => <MeoAnhLongNgan />,
+  },
+  {
+    path: "/benh/fip",
+    component: () => <FIP></FIP>,
+  },
+  {
+    path: "/benh/fiv",
+    component: () => <FIV></FIV>,
+  },
+  {
+    path: "/benh/suythan",
+    component: () => <SuyThan></SuyThan>,
+  },
+  {
+    path: "/hat/catrang",
+    component: () => <Catrang></Catrang>,
   },
   {
     path: "/*",
