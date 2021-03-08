@@ -4,7 +4,7 @@ export const Banner = styled.div`
 
   min-height: 450px;
   width: 80%;
-  background: #d9d9d9;
+  background: #cce6ff;
   margin: auto;
   display: flex;
 
@@ -44,7 +44,12 @@ export const Banner = styled.div`
 export const SocialNetWork = styled.div`
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
+
+  /* justify-content: space-between; */
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 // export const Fanpage = styled.div`

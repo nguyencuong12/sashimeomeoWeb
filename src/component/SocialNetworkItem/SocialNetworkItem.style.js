@@ -1,7 +1,9 @@
 import styled from "styled-components";
 export const SocialImage = styled.div`
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 120px;
+  max-height: 120px;
+  /* .grow { transition: all .2s ease-in-out; } */
+  transition: all 400ms ease-in-out;
   /* object-fit: contain; */
   > img {
     width: 100%;
@@ -13,32 +15,34 @@ export const SocialImage = styled.div`
 export const SocialWrapper = styled.div`
   background-color: ${(props) => props.colorTheme};
   overflow: hidden;
+  flex-grow: 1;
+  margin: 5px;
   display: flex;
   align-items: center;
-  flex-basis: 25%;
-  justify-content: space-between;
-  padding: 0px 20px;
-  height: 150px;
+  justify-content: space-evenly;
+  height: 200px;
   cursor: pointer;
   :hover ${SocialImage} {
     transform: scale(1.1);
-    transition: transform 300ms ease-in-out;
   }
 `;
 export const SocialTitle = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
   font-family: "DotGothic16", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  color: #000;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
 `;
 
 export const SocialDescription = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
   font-family: "DotGothic16", sans-serif;
+  color: #fff;
+  font-size: 18px;
 `;
 export const SocialItemLeft = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 10px;
 `;
 export const SocialItemRight = styled.div``;

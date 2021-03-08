@@ -44,7 +44,7 @@ const Header = styled.div`
 `;
 
 const Footer = styled.div`
-  position: fixed;
+  position: relative;
   bottom: 0;
   height: 50px;
   width: 100%;
@@ -56,7 +56,7 @@ const Footer = styled.div`
 `;
 
 const Body = styled.div`
-  margin: 100px 50px;
+  margin: 50px 50px;
 `;
 
 export { Header, Footer, Body };
