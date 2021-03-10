@@ -3,7 +3,7 @@ export const Banner = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
 
   min-height: 450px;
-  width: 80%;
+  width: 95%;
   background: #cce6ff;
   margin: auto;
   display: flex;

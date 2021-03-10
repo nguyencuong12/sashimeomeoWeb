@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import routes from "./routes";
 // import { HomePage, MainLayout, PublicLayout } from "./container";
-import { MainLayout } from "./container";
+import { MainLayout, Login, Signup } from "./container";
 
 function App() {
   return (
@@ -10,11 +10,15 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" render={() => <Redirect to="/login"></Redirect>}></Route>
-          <Route path="/login" component={() => <h1>LOGIN</h1>}></Route>
+          {/* <Route path="/login" component={() => <Login></Login>} </Route> */}
+          {/* <Route path="/login" component={Login}></Route> */}
+          {/* <Route path = "/login" render ={()=><Login></Login>}</Route> */}
+          <Route path="/login" render={() => <Login></Login>}></Route>
+          <Route path="/signup" render={() => <Signup></Signup>}></Route>
           <MainLayout>
             <Switch>
               {routes.map((route, index) => (
-                <Route path={route.path} key={index} component={route.component}></Route>
+                <Route exact path={route.path} key={index} component={route.component}></Route>
               ))}
             </Switch>
           </MainLayout>

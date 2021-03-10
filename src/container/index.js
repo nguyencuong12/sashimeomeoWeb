@@ -6,5 +6,18 @@ import FIP from "./BenhMeo/FIP";
 import FIV from "./BenhMeo/FIV";
 import SuyThan from "./BenhMeo/SuyThan";
 import Catrang from "./ThucAnChoMeo/Catrang";
+import Login from "./Guess/Login";
+import Signup from "./Guess/Signup";
 
-export { HomePage, MainLayout, PublicLayout, MeoAnhLongNgan, FIP, FIV, SuyThan, Catrang };
+export {
+  HomePage,
+  MainLayout,
+  PublicLayout,
+  MeoAnhLongNgan,
+  FIP,
+  FIV,
+  SuyThan,
+  Catrang,
+  Login,
+  Signup,
+};

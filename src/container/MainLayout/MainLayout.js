@@ -81,7 +81,7 @@ const MainLayout = (props) => {
         </a>
 
         <div className="button-dropdownMenu">
-          <DropdownButton variant="info" id="dropdown-basic-button" title="Mèo">
+          <DropdownButton variant="info" id="dropdown-basic-button" title="Mèo Tìm Chủ">
             {catList.map((cat, index) => (
               <Dropdown.Item
                 href="#"
@@ -111,6 +111,7 @@ const MainLayout = (props) => {
                 href="#"
                 active={disease.active}
                 onClick={(e) => handleClick(e, disease.path)}
+                key={index}
               >
                 {disease.title}
               </Dropdown.Item>
