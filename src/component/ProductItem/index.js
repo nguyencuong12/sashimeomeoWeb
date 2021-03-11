@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react";
-import { ProductItemWrapper } from "./ProductItem.style";
+import { ProductItemWrapper, Discount } from "./ProductItem.style";
 import NumberFormat from "react-number-format";
 
 const ProductItem = (props) => {
@@ -25,6 +25,9 @@ const ProductItem = (props) => {
         thousandSeparator={true}
         suffix="đ"
       ></NumberFormat>
+      {discount ? <Discount>{discount}</Discount> : null}
+      {/* <Discount>{discount}</Discount> */}
+      {/* <span className="discount">{discount}</span> */}
       {/* <span>{price}</span> */}
     </ProductItemWrapper>
   );

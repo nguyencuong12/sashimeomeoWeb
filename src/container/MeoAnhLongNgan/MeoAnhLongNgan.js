@@ -45,7 +45,7 @@ const MeoAnhLongNgan = () => {
   ];
   return (
     <React.Fragment>
-      <strong> meo anh long ngan</strong>
+      <strong>*Mèo Anh Lông Ngắn*</strong>
       <MeoAnhLongNganWrapper>
         {meoAnhLongNganProductList.map((value, index) => (
           <ProductItem
@@ -54,6 +54,7 @@ const MeoAnhLongNgan = () => {
             image={value.image}
             price={value.price}
             url={value.url}
+            discount={value.discount}
           ></ProductItem>
         ))}
       </MeoAnhLongNganWrapper>

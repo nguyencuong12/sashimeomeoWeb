@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const SocialImage = styled.div`
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 70px;
+  max-height: 70px;
   /* .grow { transition: all .2s ease-in-out; } */
   transition: all 400ms ease-in-out;
   /* object-fit: contain; */
@@ -11,7 +11,6 @@ export const SocialImage = styled.div`
     object-fit: contain;
   }
 `;
-
 export const SocialWrapper = styled.div`
   background-color: ${(props) => props.colorTheme};
   overflow: hidden;
@@ -20,8 +19,12 @@ export const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 200px;
+  height: 150px;
   cursor: pointer;
+  transition: all 250ms ease-in-out;
+  :hover {
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.75);
+  }
   :hover ${SocialImage} {
     transform: scale(1.1);
   }

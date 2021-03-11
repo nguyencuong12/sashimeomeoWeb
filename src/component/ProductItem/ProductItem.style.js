@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const ProductItemWrapper = styled.div`
+  position: relative;
   height: 350px;
   width: 300px;
   margin: 15px;
@@ -8,7 +9,7 @@ export const ProductItemWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #cccccc;
+  transition: all 200ms ease-in-out;
 
   cursor: pointer;
 
@@ -17,18 +18,31 @@ export const ProductItemWrapper = styled.div`
     width: 80%;
     object-fit: contain;
     transition: 500ms all ease-in-out;
+    margin-bottom: 30px;
   }
   :hover > img {
     transform: scale(1.1);
   }
+  :hover {
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.75);
+  }
   > span {
-    margin-top: 20px;
     text-align: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
   }
   .price {
-    font-weight: 750;
+    font-weight: 800;
+    font-size: 19px;
     color: red;
   }
+`;
+export const Discount = styled.span`
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: red;
+  color: #fff;
 `;

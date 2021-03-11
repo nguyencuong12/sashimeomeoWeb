@@ -22,7 +22,7 @@ const SocialNetworkItem = (props) => {
 
       <SocialItemRight>
         <SocialImage>
-          <img src={`/${image}`}></img>
+          <img src={`${image}`}></img>
         </SocialImage>
       </SocialItemRight>
     </SocialWrapper>

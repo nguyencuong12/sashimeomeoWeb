@@ -65,6 +65,18 @@ const MainLayout = (props) => {
     },
   ];
 
+  const accessories = [
+    {
+      title: "Áo Quần Cho Mèo",
+      path: "/phukien/ao",
+      active: true,
+    },
+    {
+      title: "Cây Đồ Chơi",
+      path: "/phukien/caydochoi",
+      active: false,
+    },
+  ];
   // (*********** FUNCTION ************//
   function handleClick(event, url) {
     event.preventDefault();
@@ -114,6 +126,19 @@ const MainLayout = (props) => {
                 key={index}
               >
                 {disease.title}
+              </Dropdown.Item>
+            ))}
+          </DropdownButton>
+
+          <DropdownButton variant="info" id="dropdown-basic-button" title="Phụ Kiện Cho Mèo">
+            {accessories.map((accessori, index) => (
+              <Dropdown.Item
+                href="#"
+                active={accessori.active}
+                onClick={(e) => handleClick(e, accessori.path)}
+                key={index}
+              >
+                {accessori.title}
               </Dropdown.Item>
             ))}
           </DropdownButton>

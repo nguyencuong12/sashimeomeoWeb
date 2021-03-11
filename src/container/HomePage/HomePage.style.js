@@ -2,8 +2,8 @@ import styled from "styled-components";
 export const Banner = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
 
-  min-height: 450px;
-  width: 95%;
+  min-height: 100px;
+  width: 100%;
   background: #cce6ff;
   margin: auto;
   display: flex;
@@ -72,3 +72,38 @@ export const SocialNetWork = styled.div`
 //   background-color: #ff0000;
 //   border: 1px solid red;
 // `;
+export const AdvertiseWrapper = styled.div`
+  margin-top: 50px;
+`;
+
+export const Advertise = styled.div`
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+`;
+export const AdvertiseTitle = styled.div`
+  font-size: 25px;
+  font-weight: 700;
+  color: #17a2b8;
+`;
+export const AdvertiseItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+export const AdvertiseFood = styled.div``;
+export const AdvertiseAccessories = styled.div``;
+export const HomeWrapper = styled.div`
+  .imgBanner {
+    /* width: 100%;
+    height: 400px;
+    object-fit: cover; */
+    max-width: 100%;
+    height: 300px;
+  }
+  .carousel-item-custom {
+    background-color: #000;
+  }
+`;

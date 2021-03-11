@@ -14,14 +14,18 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 20px 20px;
 
   .button-dropdownMenu {
     display: flex;
-    margin: 10px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px; */
   }
   .button-dropdownMenu > .dropdown {
-    margin-right: 12px;
+    margin: 5px;
   }
   .button-dropdownMenu > .dropdown:last-child {
     margin-right: 0px;
@@ -45,6 +49,12 @@ const Header = styled.div`
   }
   @media only screen and (max-width: 840px) {
     flex-direction: column;
+  }
+
+  @media only screen and (max-width: 840px) {
+    .button-dropdownMenu {
+      flex-wrap: wrap;
+    }
   }
 `;
 
