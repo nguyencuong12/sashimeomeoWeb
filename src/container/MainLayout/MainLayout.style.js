@@ -3,6 +3,26 @@
 // `;
 
 import styled from "styled-components";
+import { BsCardList, BsCardChecklist } from "react-icons/bs";
+
+export const HambugerButton = styled.div`
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  color: ${(props) => (props.open == true ? "red" : "#22313f")};
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+export const HambugerButtonList = styled(BsCardList)``;
+export const HambugerButtonListCheck = styled(BsCardChecklist)``;
+
+export const HeaderLeft = styled.div`
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+export const HeaderRight = styled.div``;
 
 const Header = styled.div`
   width: 100%;
@@ -14,6 +34,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* justify-content: space-between; */
 
   padding: 20px 20px;
 
@@ -47,6 +68,11 @@ const Header = styled.div`
   .search-field > button {
     margin-left: 3px;
   }
+
+  /* .test:hover BodySidebar {
+    display: block;
+  } */
+
   @media only screen and (max-width: 840px) {
     flex-direction: column;
   }
@@ -56,6 +82,32 @@ const Header = styled.div`
       flex-wrap: wrap;
     }
   }
+`;
+
+export const Logo = styled.a`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+  font-weight: 650;
+`;
+
+const Body = styled.div`
+  margin: 10px 0px 50px 0px;
+  min-height: 68vh;
+  display: flex;
+  border: 1px solid black;
+  /* border: ${(props) => (props.open === true ? "1px solid #009900" : "1px solid black")}; */
+  background-color: #eef1f5;
+`;
+const BodySidebar = styled.div`
+  /* width: 20%; */
+  /* min-height: 100%; */
+`;
+const BodyContent = styled.div`
+  width: 100%;
+  min-height: 100%;
+  transition: width 200ms ease-in-out;
 `;
 
 const Footer = styled.div`
@@ -68,7 +120,6 @@ const Footer = styled.div`
   align-items: center;
   justify-content: center;
   color: #fff;
-
   background-color: #17a2b8;
   /* > h3 {
     text-align: center;
@@ -79,10 +130,4 @@ const Footer = styled.div`
     font-family: "Akaya Telivigala", cursive;
   }
 `;
-
-const Body = styled.div`
-  margin: 50px 50px;
-  min-height: 65vh;
-`;
-
-export { Header, Footer, Body };
+export { Header, Footer, Body, BodySidebar, BodyContent };

@@ -107,44 +107,45 @@ const HomePage = () => {
   return (
     <HomeWrapper>
       <strong>Home</strong>
-      <Carousel fade>
-        <Carousel.Item style={{ height: "300px" }}>
-          <img
-            className="d-block w-100 imgBanner"
-            src="http://topwaymaterials.com/images/assets/landscapes/landscape-7-800x400.jpg"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 imgBanner"
-            // src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
-            src="http://topwaymaterials.com/images/assets/landscapes/landscape-7-800x400.jpg"
-          />
+      <div className="carousel-wrapper">
+        <Carousel fade interval={4000} pause="hover" style={{ cursor: "pointer", width: "1028px" }}>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 imgBanner"
+              src="https://wallpaperaccess.com/full/32048.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 imgBanner"
+              // src="holder.js/800x400?text=Second slide&bg=282c34"
+              alt="Second slide"
+              src="https://www.catbreedslist.com/cat-wallpapers/Maine-Coon-kitten-cute-fluffy-1024x768.jpg"
+            />
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 imgBanner"
+              src="https://images.wallpaperscraft.com/image/cat_profile_dark_166877_1024x768.jpg"
+              alt="Third slide"
+            />
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 imgBanner"
-            src="http://topwaymaterials.com/images/assets/landscapes/landscape-7-800x400.jpg"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
 
       {/* <Banner>
         <div className="banner-description">

@@ -101,9 +101,15 @@ export const HomeWrapper = styled.div`
     height: 400px;
     object-fit: cover; */
     max-width: 100%;
-    height: 300px;
+    height: 784px;
+    object-fit: none;
   }
   .carousel-item-custom {
     background-color: #000;
+  }
+  .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

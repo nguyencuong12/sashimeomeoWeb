@@ -1,8 +1,26 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { useState } from "react";
+
 import { Button, DropdownButton, Dropdown, Form } from "react-bootstrap";
-import { Header, Body, Footer } from "./MainLayout.style";
+import {
+  Header,
+  Body,
+  Footer,
+  Logo,
+  HambugerButton,
+  BodySidebar,
+  BodyContent,
+  HeaderLeft,
+  HeaderRight,
+  HambugerButtonList,
+  HambugerButtonListCheck,
+} from "./MainLayout.style";
+import Sidebar from "../../component/Sidebar";
+
 const MainLayout = (props) => {
+  const [openHambuger, setOpenHambuger] = useState(false);
+
   const childrenWithProps = React.Children.map(props.children, (child) => {
     return React.cloneElement(child, { onItemSelectedChanged: true });
   });
@@ -82,17 +100,51 @@ const MainLayout = (props) => {
     event.preventDefault();
     window.location.href = url;
   }
+
+  function handleClickHambuger(event) {
+    event.preventDefault();
+    console.log("OPEN STATE", openHambuger);
+    setOpenHambuger(!openHambuger);
+  }
   // (*********** FUNCTION ************//
 
   return (
     <React.Fragment>
       {/* <h1>this is main layout</h1> */}
       <Header>
-        <a className="logo" href="/home">
-          <img src="/shi.jpg"></img>
-        </a>
+        <HeaderLeft>
+          <Logo className="logo" href="/home">
+            <img src="/shi.jpg"></img>
+            <span>Sashimeomeo</span>
+          </Logo>
+          <HambugerButton onClick={(e) => handleClickHambuger(e)}>
+            {openHambuger === true ? (
+              <HambugerButtonList fontSize={"34"}></HambugerButtonList>
+            ) : (
+              <HambugerButtonListCheck fontSize={"34"} color={"#009900"}></HambugerButtonListCheck>
+            )}
+          </HambugerButton>
+        </HeaderLeft>
+        <HeaderRight>
+          <div className="header-search">
+            {/* <Form.Group> */}
+            <div className="search-field">
+              <Form.Control type="text" placeholder="Tìm Kiếm" />
+              <Button variant="info" size="sm">
+                Search
+              </Button>
+            </div>
+            {/* </Form.Group> */}
+          </div>
+        </HeaderRight>
 
-        <div className="button-dropdownMenu">
+        {/* <BsLayoutTextSidebarReverse fontSize={"30"}></BsLayoutTextSidebarReverse> */}
+        {/* <a className="logo" href="/home">
+          <img src="/shi.jpg"></img>
+          <span>Sashi</span>
+        </a> */}
+
+        {/* <div className="button-dropdownMenu">
           <DropdownButton variant="info" id="dropdown-basic-button" title="Mèo Tìm Chủ">
             {catList.map((cat, index) => (
               <Dropdown.Item
@@ -142,22 +194,14 @@ const MainLayout = (props) => {
               </Dropdown.Item>
             ))}
           </DropdownButton>
-        </div>
-
-        <div className="header-search">
-          {/* <Form.Group> */}
-          <div className="search-field">
-            <Form.Control type="text" placeholder="Tìm Kiếm" />
-            <Button variant="info" size="sm">
-              Search
-            </Button>
-          </div>
-          {/* </Form.Group> */}
-        </div>
+        </div> */}
       </Header>
-      <Body>{childrenWithProps}</Body>
-      {/* <div className="body-content">{childrenWithProps}</div> */}
-      {/* <div className="footer"></div> */}
+      {/* <Body>{childrenWithProps}</Body> */}
+      <Body>
+        <Sidebar open={openHambuger}></Sidebar>
+        <BodyContent open={openHambuger}>{childrenWithProps}</BodyContent>
+      </Body>
+
       <Footer>
         <h3>@Sashimeomeo</h3>
       </Footer>
